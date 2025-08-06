@@ -26,7 +26,7 @@ def setup_pinecone():
             name=INDEX_NAME,
             dimension=1536,  # Dimension for OpenAI's text-embedding-3-small
             metric="cosine", # Cosine similarity is great for text
-            spec=ServerlessSpec(cloud="aws", region="us-west-2")
+            spec=ServerlessSpec(cloud="aws", region="us-east-1") # CORRECTED REGION
         )
     return pc.Index(INDEX_NAME)
 
